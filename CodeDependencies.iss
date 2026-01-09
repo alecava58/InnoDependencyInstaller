@@ -512,6 +512,18 @@ begin
   end;
 end;
 
+procedure Dependency_AddDotNet80Hosting;
+begin
+  // https://dotnet.microsoft.com/download/dotnet/8.0
+  if not Dependency_IsNetCoreInstalled('Microsoft.Hosting.App', 8, 0, 22) then begin
+    Dependency_Add('dotnet80hosting' + Dependency_ArchSuffix + '.exe',
+      '/lcid ' + IntToStr(GetUILanguage) + ' /passive /norestart',
+      '.NET Hosting Runtime 8.0.22' + Dependency_ArchTitle,
+      Dependency_String('https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/8.0.22/dotnet-hosting-8.0.22-win.exe', ''),
+      '', False, False);
+  end;
+end;
+
 procedure Dependency_AddDotNet90;
 begin
   // https://dotnet.microsoft.com/download/dotnet/9.0
@@ -548,6 +560,18 @@ begin
   end;
 end;
 
+procedure Dependency_AddDotNet90Hosting;
+begin
+  // https://dotnet.microsoft.com/download/dotnet/9.0
+  if not Dependency_IsNetCoreInstalled('Microsoft.Hosting.App', 9, 0, 11) then begin
+    Dependency_Add('dotnet90hosting' + Dependency_ArchSuffix + '.exe',
+      '/lcid ' + IntToStr(GetUILanguage) + ' /passive /norestart',
+      '.NET Hosting Runtime 9.0.11' + Dependency_ArchTitle,
+      Dependency_String('https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/9.0.11/dotnet-hosting-9.0.11-win.exe', ''),
+      '', False, False);
+  end;
+end;
+
 procedure Dependency_AddDotNet100;
 begin
   // https://dotnet.microsoft.com/download/dotnet/10.0
@@ -580,6 +604,18 @@ begin
       '/lcid ' + IntToStr(GetUILanguage) + ' /passive /norestart',
       '.NET Desktop Runtime 10.0.1' + Dependency_ArchTitle,
       Dependency_String('https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.1/windowsdesktop-runtime-10.0.1-win-x86.exe', 'https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.1/windowsdesktop-runtime-10.0.1-win-x64.exe'),
+      '', False, False);
+  end;
+end;
+
+procedure Dependency_AddDotNet100Hosting;
+begin
+  // https://dotnet.microsoft.com/download/dotnet/10.0
+  if not Dependency_IsNetCoreInstalled('Microsoft.Hosting.App', 10, 0, 1) then begin
+    Dependency_Add('dotnet100hosting' + Dependency_ArchSuffix + '.exe',
+      '/lcid ' + IntToStr(GetUILanguage) + ' /passive /norestart',
+      '.NET Hosting Runtime 10.0.1' + Dependency_ArchTitle,
+      Dependency_String('https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/10.0.1/dotnet-hosting-10.0.1-win.exe', ''),
       '', False, False);
   end;
 end;
