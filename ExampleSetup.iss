@@ -60,12 +60,17 @@ Filename: "{app}\MyProg.exe"; Description: "{cm:LaunchProgram,{#MyAppSetupName}}
 function InitializeSetup: Boolean;
 begin
   // comment out functions to disable installing them
-  Dependency_AddDotNet35;
-  Dependency_AddDotNet40;
-  Dependency_AddDotNet45;
-  Dependency_AddDotNet46;
-  Dependency_AddDotNet47;
-  Dependency_AddDotNet48;
+
+  Dependency_AddDotNet80Hosting;
+  //Dependency_AddDotNet90Hosting;
+  //Dependency_AddDotNet100Hosting;
+
+  //Dependency_AddDotNet35;
+  //Dependency_AddDotNet40;
+  //Dependency_AddDotNet45;
+  //Dependency_AddDotNet46;
+  //Dependency_AddDotNet47;
+  //Dependency_AddDotNet48;
   //Dependency_AddDotNet481;
   //Dependency_AddNetCore31; // EOL - .NET Core 3.1
   //Dependency_AddNetCore31Asp; // EOL - .NET Core 3.1
@@ -79,39 +84,39 @@ begin
   //Dependency_AddDotNet70; // EOL - .NET 7.0
   //Dependency_AddDotNet70Asp; // EOL - .NET 7.0
   //Dependency_AddDotNet70Desktop; // EOL - .NET 7.0
-  Dependency_AddDotNet80;
-  Dependency_AddDotNet80Asp;
-  Dependency_AddDotNet80Desktop;
-  Dependency_AddDotNet90;
-  Dependency_AddDotNet90Asp;
-  Dependency_AddDotNet90Desktop;
-  Dependency_AddDotNet100;
-  Dependency_AddDotNet100Asp;
-  Dependency_AddDotNet100Desktop;
+  //Dependency_AddDotNet80;
+  //Dependency_AddDotNet80Asp;
+  //Dependency_AddDotNet80Desktop;
+  //Dependency_AddDotNet90;
+  //Dependency_AddDotNet90Asp;
+  //Dependency_AddDotNet90Desktop;
+  //Dependency_AddDotNet100;
+  //Dependency_AddDotNet100Asp;
+  //Dependency_AddDotNet100Desktop;
 
-  Dependency_AddVC2005;
-  Dependency_AddVC2008;
-  Dependency_AddVC2010;
-  Dependency_AddVC2012;
+  //Dependency_AddVC2005;
+  //Dependency_AddVC2008;
+  //Dependency_AddVC2010;
+  //Dependency_AddVC2012;
   //Dependency_ForceX86 := True; // force 32-bit install of next dependencies
-  Dependency_AddVC2013;
+  //Dependency_AddVC2013;
   //Dependency_ForceX86 := False; // disable forced 32-bit install again
-  Dependency_AddVC2015To2022;
+  //Dependency_AddVC2015To2022;
 
   //Dependency_AddDirectX;
 
-  Dependency_AddSql2008Express;
-  Dependency_AddSql2012Express;
-  Dependency_AddSql2014Express;
-  Dependency_AddSql2016Express;
-  Dependency_AddSql2017Express;
-  Dependency_AddSql2019Express;
-  Dependency_AddSql2022Express;
+  //Dependency_AddSql2008Express;
+  //Dependency_AddSql2012Express;
+  //Dependency_AddSql2014Express;
+  //Dependency_AddSql2016Express;
+  //Dependency_AddSql2017Express;
+  //Dependency_AddSql2019Express;
+  //Dependency_AddSql2022Express;
 
-  Dependency_AddWebView2;
+  //Dependency_AddWebView2;
 
-  Dependency_AddAccessDatabaseEngine2010;
-  Dependency_AddAccessDatabaseEngine2016;
+  //Dependency_AddAccessDatabaseEngine2010;
+  //Dependency_AddAccessDatabaseEngine2016;
 
   Result := True;
 end;
